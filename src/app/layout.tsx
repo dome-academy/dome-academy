@@ -1,4 +1,5 @@
 import "./globals.css";
+import Navbar from "./navbar";
 
 export const metadata = {
   title: "Dome Academy | Colloborate together and build great things",
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body>{children}</body>
+      <body className='bg-gray-50 dark:bg-neutral-950'>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
