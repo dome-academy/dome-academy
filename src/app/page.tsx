@@ -56,6 +56,7 @@ export default function Home() {
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
+            placeholder='blur'
           />
         </div>
         <div className='bg-white/30 h-auto aspect-square lg:aspect-[4/5] self-center relative hidden md:block'>
@@ -67,6 +68,7 @@ export default function Home() {
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
+            placeholder='blur'
           />
         </div>
         <div className='bg-white/30 h-auto aspect-square lg:aspect-[3/4] self-center relative hidden md:block'>
@@ -78,6 +80,7 @@ export default function Home() {
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
+            placeholder='blur'
           />
         </div>
         <div className='bg-white/30 h-auto aspect-square lg:aspect-[4/5] self-center relative'>
@@ -89,6 +92,7 @@ export default function Home() {
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
+            placeholder='blur'
           />
         </div>
       </section>
@@ -166,6 +170,7 @@ export default function Home() {
                   src='/images/ladies-collaborating.jpg'
                   className='object-cover border-2 border-neutral-950 dark:border-slate-50'
                   fill
+                  placeholder='blur'
                 />
               </figure>
               <figure className='h-40 w-full object-cover sm:h-56 md:h-full relative'>
@@ -174,6 +179,7 @@ export default function Home() {
                   src='/images/guy-with-laptop.webp'
                   className='object-cover border-2 border-neutral-950 dark:border-slate-50'
                   fill
+                  placeholder='blur'
                 />
               </figure>
             </div>
