@@ -56,7 +56,6 @@ export default function Home() {
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
-            placeholder='blur'
           />
         </div>
         <div className='bg-white/30 h-auto aspect-square lg:aspect-[4/5] self-center relative hidden md:block'>
@@ -68,7 +67,6 @@ export default function Home() {
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
-            placeholder='blur'
           />
         </div>
         <div className='bg-white/30 h-auto aspect-square lg:aspect-[3/4] self-center relative hidden md:block'>
@@ -80,7 +78,6 @@ export default function Home() {
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
-            placeholder='blur'
           />
         </div>
         <div className='bg-white/30 h-auto aspect-square lg:aspect-[4/5] self-center relative'>
@@ -92,47 +89,56 @@ export default function Home() {
             sizes='(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw'
-            placeholder='blur'
           />
         </div>
       </section>
-      <section
-        className={
-          "grid grid-flow-col bg-gray-50 dark:bg-neutral-950 -mx-4 md:-mx-16  text-slate-900 dark:text-slate-200 gap-x-5 lg:gap-x-8 font-bold uppercase py-8 justify-start items-center border-y-2 border-neutral-950 dark:border-slate-50 " +
-          ClashDisplay.className
-        }
-      >
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-purple-600 dark:text-purple-500'>
-          Connect
-        </h2>
-        <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-yellow-500 dark:text-yellow-400'>
-          Learn
-        </h2>
-        <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-red-600 dark:text-red-500'>
-          Create
-        </h2>
-        <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-green-600 dark:text-green-400'>
-          Grow
-        </h2>
-        <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-purple-600 dark:text-purple-500'>
-          Connect
-        </h2>
-        <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-yellow-500 dark:text-yellow-400'>
-          Learn
-        </h2>
-        <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-red-600 dark:text-red-500'>
-          Create
-        </h2>
-        <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
-        <h2 className='text-2xl md:text-4xl lg:text-6xl text-green-600 dark:text-green-400'>
-          Grow
-        </h2>
+      <section className='bg-gray-50 dark:bg-neutral-950 border-y-2 border-neutral-950 dark:border-slate-50 -mx-4 md:-mx-16 relative'>
+        <div
+          className={
+            "inline-grid grid-flow-col w-full text-slate-900 dark:text-slate-200 gap-x-5 lg:gap-x-8 font-bold uppercase py-8 justify-start items-center animate-marquee3 md:animate-marquee  relative " +
+            ClashDisplay.className
+          }
+        >
+          <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-purple-600 dark:text-purple-500'>
+            Connect
+          </h2>
+          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
+          <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-yellow-500 dark:text-yellow-400'>
+            Learn
+          </h2>
+          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
+          <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-red-600 dark:text-red-500'>
+            Create
+          </h2>
+          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
+          <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-green-600 dark:text-green-400'>
+            Grow
+          </h2>
+          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
+        </div>
+        <div
+          className={
+            "hidden md:inline-grid grid-flow-col w-full text-slate-900 dark:text-slate-200 gap-x-5 lg:gap-x-8 font-bold uppercase py-8 justify-start items-center animate-marquee2 absolute inset-0  " +
+            ClashDisplay.className
+          }
+        >
+          <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-purple-600 dark:text-purple-500'>
+            Connect
+          </h2>
+          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
+          <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-yellow-500 dark:text-yellow-400'>
+            Learn
+          </h2>
+          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
+          <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-red-600 dark:text-red-500'>
+            Create
+          </h2>
+          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
+          <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-green-600 dark:text-green-400'>
+            Grow
+          </h2>
+          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
+        </div>
       </section>
       <section className='py-6'>
         <div
@@ -170,7 +176,6 @@ export default function Home() {
                   src='/images/ladies-collaborating.jpg'
                   className='object-cover border-2 border-neutral-950 dark:border-slate-50'
                   fill
-                  placeholder='blur'
                 />
               </figure>
               <figure className='h-40 w-full object-cover sm:h-56 md:h-full relative'>
@@ -179,7 +184,6 @@ export default function Home() {
                   src='/images/guy-with-laptop.webp'
                   className='object-cover border-2 border-neutral-950 dark:border-slate-50'
                   fill
-                  placeholder='blur'
                 />
               </figure>
             </div>
