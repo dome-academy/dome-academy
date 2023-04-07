@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import "./globals.css";
 import Navbar from "./navbar";
 
@@ -16,6 +17,7 @@ export default function RootLayout({
       <body className='bg-gray-50 dark:bg-slate-900 w-screen overflow-x-hidden'>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

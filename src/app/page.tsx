@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main
       className={
-        `border-x-2 border-x-neutral-950 dark:border-x-slate-50 mx-4 md:mx-16 min-h-screen mb-0` +
+        `border-x-2 border-x-neutral-950 dark:border-x-slate-50 mx-4 md:mx-16 min-h-screen mb-0 sticky` +
         ClashGrotesk.className
       }
     >
@@ -17,7 +17,7 @@ export default function Home() {
             ClashDisplay.className
           }
         >
-          Where talent meets development
+          Learn alongside others who support you
         </h1>
         <p
           className={
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
       <section
         className={
-          "grid grid-flow-col bg-gray-50 dark:bg-neutral-950 -mx-4 md:-mx-16  text-slate-900 dark:text-slate-200 gap-x-5 lg:gap-x-8 font-semibold uppercase py-8 justify-start items-center border-y-2 border-neutral-950 dark:border-slate-50 " +
+          "grid grid-flow-col bg-gray-50 dark:bg-neutral-950 -mx-4 md:-mx-16  text-slate-900 dark:text-slate-200 gap-x-5 lg:gap-x-8 font-bold uppercase py-8 justify-start items-center border-y-2 border-neutral-950 dark:border-slate-50 " +
           ClashDisplay.className
         }
       >
