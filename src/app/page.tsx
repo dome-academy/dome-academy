@@ -13,7 +13,7 @@ export default function Home() {
       <header className='pt-12 md:pt-24 px-4 text-center'>
         <h1
           className={
-            "text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-semibold mb-4 text-slate-900 dark:text-slate-100 max-w-4xl mx-auto " +
+            "text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-semibold mb-4 text-slate-800 dark:text-slate-200 max-w-4xl mx-auto  " +
             ClashDisplay.className
           }
         >
@@ -21,7 +21,7 @@ export default function Home() {
         </h1>
         <p
           className={
-            "text-base md:text-lg xl:text-xl max-w-xl mx-auto text-slate-900 dark:text-slate-200 mb-6 " +
+            "text-base md:text-lg xl:text-xl max-w-xl mx-auto text-slate-700 dark:text-slate-300 mb-6 " +
             ClashGrotesk.className
           }
         >
@@ -114,7 +114,6 @@ export default function Home() {
           <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-green-600 dark:text-green-400'>
             Grow
           </h2>
-          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
         </div>
         <div
           className={
@@ -137,7 +136,6 @@ export default function Home() {
           <h2 className='text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-green-600 dark:text-green-400'>
             Grow
           </h2>
-          <div className='h-4 w-4 bg-gray-950 dark:bg-slate-50' />
         </div>
       </section>
       <section className='py-6'>
@@ -150,7 +148,7 @@ export default function Home() {
           <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
             <div className='bg-gray-50 dark:bg-neutral-950 p-8 md:p-12 lg:px-16 lg:py-24 border-2 border-neutral-950 dark:border-slate-50'>
               <div className='mx-auto max-w-xl text-left'>
-                <h2 className='text-2xl font-bold text-slate-800 dark:text-slate-50 md:text-3xl xl:text-4xl'>
+                <h2 className='text-2xl font-semibold text-slate-800 dark:text-slate-200 md:text-3xl xl:text-4xl'>
                   Join the growth community of innovators, developers and
                   entreprenuers
                 </h2>
@@ -162,7 +160,7 @@ export default function Home() {
                 </p>
 
                 <div className='mt-4 md:mt-8'>
-                  <button className='appearance-none px-3 text-black dark:text-white hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block py-3 border-2 border-neutral-950 dark:border-slate-50'>
+                  <button className='appearance-none px-3 text-slate-800 dark:text-slate-100 hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block py-3 border-2 border-neutral-950 dark:border-slate-50'>
                     Join waitlist
                   </button>
                 </div>

@@ -1,4 +1,4 @@
-import { ClashDisplay } from "@/utils/font";
+import { ClashDisplay, ClashGrotesk } from "@/utils/font";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,14 +20,27 @@ const Navbar = () => {
             Dome
           </h1>
         </Link>
-        <button
-          className={
-            "appearance-none px-3 text-black dark:text-white hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block py-3 border-l-2 border-neutral-950 dark:border-slate-50 " +
-            ClashDisplay.className
-          }
-        >
-          Join waitlist
-        </button>
+        <ul className='flex'>
+          <li>
+            <Link
+              href='/about'
+              className={
+                "flex justify-center min-w-[120px] px-3 items-center scale-105 h-full text-black dark:text-white hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold border-l-2 border-neutral-950 dark:border-slate-50 " +
+                ClashGrotesk.className
+              }
+            >
+              About
+            </Link>
+          </li>
+          <button
+            className={
+              "appearance-none min-w-[120px] px-3 md:px-6  text-black dark:text-white hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block border-l-2 border-neutral-950 dark:border-slate-50 " +
+              ClashDisplay.className
+            }
+          >
+            Join waitlist
+          </button>
+        </ul>
       </nav>
     </header>
   );

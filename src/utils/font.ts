@@ -1,4 +1,4 @@
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 
 export const ClashDisplay = localFont({
   src: "../../public/fonts/ClashDisplay-Variable.woff2",
