@@ -21,7 +21,7 @@ const Navbar = () => {
           </h1>
         </Link>
         <ul className='flex'>
-          <li>
+          <li className='hidden md:block'>
             <Link
               href='/about'
               className={

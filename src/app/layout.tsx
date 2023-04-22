@@ -1,3 +1,4 @@
+import WaitlistModal from "@/components/WaitlistModal";
 import Footer from "./footer";
 import "./globals.css";
 import Navbar from "./navbar";
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className='bg-gray-50 dark:bg-slate-900 w-screen overflow-x-hidden'>
+        {/* <WaitListInitializer email='' showModal={false} /> */}
         <Navbar />
+        <WaitlistModal />
+
         {children}
         <Footer />
       </body>
