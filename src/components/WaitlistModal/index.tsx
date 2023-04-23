@@ -47,7 +47,7 @@ const WaitlistModal = () => {
             strokeWidth='2'
             strokeLinecap='round'
             strokeLinejoin='round'
-            className='feather feather-x text-slate-50'
+            className='feather feather-x text-slate-600 dark:text-slate-50'
           >
             <line x1='18' y1='6' x2='6' y2='18'></line>
             <line x1='6' y1='6' x2='18' y2='18'></line>
@@ -58,7 +58,7 @@ const WaitlistModal = () => {
         <div className='text-center p-3 py-4 md:py-10 border-2 border-neutral-950 dark:border-slate-50'>
           <h1
             className={
-              "text-2xl font-semibold text-slate-800 dark:text-slate-200 md:text-3xl " +
+              "text-2xl font-semibold text-purple-600 dark:text-purple-500 md:text-3xl " +
               ClashDisplay.className
             }
           >

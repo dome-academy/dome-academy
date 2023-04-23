@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='bg-gray-50 dark:bg-slate-900 w-screen overflow-x-hidden'>
+      <body className='bg-gray-50 dark:bg-slate-950 w-screen overflow-x-hidden'>
         {/* <WaitListInitializer email='' showModal={false} /> */}
         <Navbar />
         <WaitlistModal />

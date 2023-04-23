@@ -15,11 +15,16 @@ export default function Home() {
       <header className='pt-12 md:pt-24 px-4 text-center'>
         <h1
           className={
-            "text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-semibold mb-4 text-slate-800 dark:text-slate-200 max-w-4xl mx-auto  " +
+            "text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-semibold mb-4 text-slate-900 dark:text-slate-200 max-w-4xl mx-auto  " +
             ClashDisplay.className
           }
         >
-          Learn alongside others who support you
+          <span className='text-yellow-500 dark:text-yellow-400'>Learn</span> &{" "}
+          <span className='text-green-600 dark:text-green-400'>grow</span>{" "}
+          alongside{" "}
+          <span className='text-purple-600 dark:text-purple-500'>others</span>{" "}
+          who <span className='text-red-600 dark:text-red-500'>support</span>{" "}
+          you
         </h1>
         <p
           className={
