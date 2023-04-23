@@ -30,6 +30,7 @@ const WaitlistForm = () => {
         className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
         inputMode='email'
         placeholder='johndoe@mail.com'
+        required
         value={formik.values.email}
         onChange={formik.handleChange}
       />
