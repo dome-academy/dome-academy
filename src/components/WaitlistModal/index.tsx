@@ -3,12 +3,23 @@ import { ClashDisplay } from "@/utils/font";
 import { ClashGrotesk } from "@/utils/font";
 import { useWaitlistStore } from "@/store/waitlistStore";
 import { useFormik } from "formik";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { envs } from "@/utils/config";
+import MailerLite from "@mailerlite/mailerlite-nodejs";
 
 const WaitlistModal = () => {
   const { showModal, email, setWaitlistStore } = useWaitlistStore();
+  const [loading, setLoading] = useState(false);
+  const [added, setAdded] = useState(false);
 
-  const handleHide = () => setWaitlistStore(false);
+  const handleHide = () => {
+    setAdded(false);
+    setWaitlistStore(false);
+  };
+
+  const mailerlite = new MailerLite({
+    api_key: envs.MAILER_LITE_API,
+  });
 
   const formik = useFormik({
     initialValues: {
@@ -16,8 +27,23 @@ const WaitlistModal = () => {
       lastName: "",
       email: email,
     },
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: ({ email, firstName, lastName }) => {
+      setLoading(true);
+      mailerlite.subscribers
+        .createOrUpdate({
+          email,
+          fields: {
+            name: firstName,
+            last_name: lastName,
+          },
+          groups: [envs.GROUP_ID],
+        })
+        .then((res) => {
+          setAdded(true);
+          console.log(res.data);
+        })
+        .catch((e) => console.log(e?.response));
+      setLoading(false);
     },
   });
 
@@ -35,8 +61,11 @@ const WaitlistModal = () => {
         ClashGrotesk.className
       }
     >
-      <div className='inset-x-0 top-0 bg-transparent z-30 absolute p-4 md:p-8 lg:p-10 flex justify-end'>
-        <button onClick={handleHide} className='scale-125 bg-red inline-flex'>
+      <div
+        onClick={handleHide}
+        className='inset-0 bg-transparent z-10 absolute p-4 md:p-8 lg:p-10 flex justify-end cursor-pointer'
+      >
+        <button className='scale-125 bg-red inline-flex'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24'
@@ -68,80 +97,85 @@ const WaitlistModal = () => {
             As a member of Dome Academy, you have access to community meetings,
             mentorship and collaboration with seasoned instructors and experts.
           </p>
-
-          <form
-            onSubmit={formik.handleSubmit}
-            className='mt-4 md:mt-6 space-y-5 text-left max-w-lg mx-auto'
-          >
-            <section>
-              <p className='mb-2 text-slate-700 dark:text-slate-300'>Name</p>
-              <div
-                className={
-                  "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
-                  ClashGrotesk.className
-                }
-              >
-                <input
-                  type='text'
-                  name='firstName'
-                  className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
-                  inputMode='text'
-                  placeholder='John Doe'
-                  value={formik.values.firstName}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-              </div>
-            </section>
-            <section>
-              <p className='mb-2 text-slate-700 dark:text-slate-300'>Name</p>
-              <div
-                className={
-                  "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
-                  ClashGrotesk.className
-                }
-              >
-                <input
-                  type='text'
-                  name='lastName'
-                  className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
-                  inputMode='text'
-                  placeholder='John Doe'
-                  value={formik.values.lastName}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-              </div>
-            </section>
-            <section>
-              <p className='mb-2 text-slate-700 dark:text-slate-300'>Email</p>
-              <div
-                className={
-                  "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
-                  ClashGrotesk.className
-                }
-              >
-                <input
-                  type='email'
-                  name='email'
-                  className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
-                  inputMode='email'
-                  placeholder='johndoe@mail.com'
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                />
-              </div>
-            </section>
-            <section>
-              <button
-                type='submit'
-                className='appearance-none mt-3 px-3 w-full text-slate-800 dark:text-slate-100 hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block py-3 border-2 border-neutral-950 dark:border-slate-50'
-              >
-                Join waitlist
-              </button>
-            </section>
-          </form>
+          {added ? (
+            <p className='mt-4 text-green-600 dark:text-green-400 font-semibold md:text-lg'>
+              You have been added to the waitlist!
+            </p>
+          ) : (
+            <form
+              onSubmit={formik.handleSubmit}
+              className='mt-4 md:mt-6 space-y-5 text-left max-w-lg mx-auto'
+            >
+              <section>
+                <p className='mb-2 text-slate-700 dark:text-slate-300'>Name</p>
+                <div
+                  className={
+                    "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
+                    ClashGrotesk.className
+                  }
+                >
+                  <input
+                    type='text'
+                    name='firstName'
+                    className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
+                    inputMode='text'
+                    placeholder='John Doe'
+                    value={formik.values.firstName}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
+              </section>
+              <section>
+                <p className='mb-2 text-slate-700 dark:text-slate-300'>Name</p>
+                <div
+                  className={
+                    "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
+                    ClashGrotesk.className
+                  }
+                >
+                  <input
+                    type='text'
+                    name='lastName'
+                    className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
+                    inputMode='text'
+                    placeholder='John Doe'
+                    value={formik.values.lastName}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
+              </section>
+              <section>
+                <p className='mb-2 text-slate-700 dark:text-slate-300'>Email</p>
+                <div
+                  className={
+                    "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
+                    ClashGrotesk.className
+                  }
+                >
+                  <input
+                    type='email'
+                    name='email'
+                    className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
+                    inputMode='email'
+                    placeholder='johndoe@mail.com'
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                </div>
+              </section>
+              <section>
+                <button
+                  type='submit'
+                  className='appearance-none mt-3 px-3 w-full text-slate-800 dark:text-slate-100 hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block py-3 border-2 border-neutral-950 dark:border-slate-50'
+                >
+                  {!loading ? "Join waitlist" : "Adding you to waitlist"}
+                </button>
+              </section>
+            </form>
+          )}
         </div>
       </article>
     </main>
