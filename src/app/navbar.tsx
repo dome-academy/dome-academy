@@ -1,8 +1,11 @@
+"use client";
+import { useWaitlistStore } from "@/store/waitlistStore";
 import { ClashDisplay, ClashGrotesk } from "@/utils/font";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
+  const { setWaitlistStore } = useWaitlistStore();
   return (
     <header className='border-b-2 bg-gray-50 dark:bg-neutral-950 border-neutral-950 dark:border-slate-50 px-4 md:px-16'>
       <nav className='flex w-full text-slate-900 dark:text-slate-100 border-x-2 border-neutral-950 dark:border-slate-50 justify-between'>
@@ -33,6 +36,7 @@ const Navbar = () => {
             </Link>
           </li>
           <button
+            onClick={() => setWaitlistStore(true)}
             className={
               "appearance-none min-w-[120px] px-3 md:px-6  text-black dark:text-white hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block border-l-2 border-neutral-950 dark:border-slate-50 " +
               ClashDisplay.className
