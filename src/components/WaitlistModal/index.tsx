@@ -93,88 +93,100 @@ const WaitlistModal = () => {
           >
             Join our waitlist
           </h1>
-          <p className='text-slate-700 dark:text-slate-300 w-[4/5] md:max-w-sm mx-auto mt-3 lg:text-lg'>
-            As a member of Dome Academy, you have access to community meetings,
-            mentorship and collaboration with seasoned instructors and experts.
-          </p>
+
           {added ? (
-            <p className='mt-4 text-green-600 dark:text-green-400 font-semibold md:text-lg'>
-              You have been added to the waitlist!
+            <p className='mt-4 text-green-600 dark:text-green-400 font-medium md:text-lg'>
+              Thank you for joining our waitlist! 🙏 You&apos;ll be the first to
+              get access and receive exclusive behind-the-scenes updates. Keep
+              an eye on your inbox for more information coming your way soon! 🎉
             </p>
           ) : (
-            <form
-              onSubmit={formik.handleSubmit}
-              className='mt-4 md:mt-6 space-y-5 text-left max-w-lg mx-auto'
-            >
-              <section>
-                <p className='mb-2 text-slate-700 dark:text-slate-300'>Name</p>
-                <div
-                  className={
-                    "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
-                    ClashGrotesk.className
-                  }
-                >
-                  <input
-                    type='text'
-                    name='firstName'
-                    className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
-                    inputMode='text'
-                    placeholder='John Doe'
-                    value={formik.values.firstName}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  />
-                </div>
-              </section>
-              <section>
-                <p className='mb-2 text-slate-700 dark:text-slate-300'>Name</p>
-                <div
-                  className={
-                    "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
-                    ClashGrotesk.className
-                  }
-                >
-                  <input
-                    type='text'
-                    name='lastName'
-                    className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
-                    inputMode='text'
-                    placeholder='John Doe'
-                    value={formik.values.lastName}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  />
-                </div>
-              </section>
-              <section>
-                <p className='mb-2 text-slate-700 dark:text-slate-300'>Email</p>
-                <div
-                  className={
-                    "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
-                    ClashGrotesk.className
-                  }
-                >
-                  <input
-                    type='email'
-                    name='email'
-                    className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
-                    inputMode='email'
-                    placeholder='johndoe@mail.com'
-                    value={formik.values.email}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  />
-                </div>
-              </section>
-              <section>
-                <button
-                  type='submit'
-                  className='appearance-none mt-3 px-3 w-full text-slate-800 dark:text-slate-100 hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block py-3 border-2 border-neutral-950 dark:border-slate-50'
-                >
-                  {!loading ? "Join waitlist" : "Adding you to waitlist"}
-                </button>
-              </section>
-            </form>
+            <>
+              <p className='text-slate-700 dark:text-slate-300 w-[4/5] md:max-w-sm mx-auto mt-3 lg:text-lg'>
+                As a member of Dome Academy, you have access to community
+                meetings, mentorship and collaboration with seasoned instructors
+                and experts.
+              </p>
+              <form
+                onSubmit={formik.handleSubmit}
+                className='mt-4 md:mt-6 space-y-5 text-left max-w-lg mx-auto'
+              >
+                <section>
+                  <p className='mb-2 text-slate-700 dark:text-slate-300'>
+                    First name
+                  </p>
+                  <div
+                    className={
+                      "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
+                      ClashGrotesk.className
+                    }
+                  >
+                    <input
+                      type='text'
+                      name='firstName'
+                      className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
+                      inputMode='text'
+                      placeholder='John'
+                      value={formik.values.firstName}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                    />
+                  </div>
+                </section>
+                <section>
+                  <p className='mb-2 text-slate-700 dark:text-slate-300'>
+                    Last name
+                  </p>
+                  <div
+                    className={
+                      "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
+                      ClashGrotesk.className
+                    }
+                  >
+                    <input
+                      type='text'
+                      name='lastName'
+                      className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
+                      inputMode='text'
+                      placeholder='Doe'
+                      value={formik.values.lastName}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                    />
+                  </div>
+                </section>
+                <section>
+                  <p className='mb-2 text-slate-700 dark:text-slate-300'>
+                    Email
+                  </p>
+                  <div
+                    className={
+                      "flex  text-slate-900 dark:text-slate-200 border-2 border-neutral-950 dark:border-slate-50 divide-x-2 divide-neutral-950 dark:divide-slate-50 mx-auto " +
+                      ClashGrotesk.className
+                    }
+                  >
+                    <input
+                      type='email'
+                      name='email'
+                      className='bg-transparent outline-none border-none h-full py-4 px-3 flex-1 md:text-lg'
+                      inputMode='email'
+                      placeholder='johndoe@mail.com'
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                    />
+                  </div>
+                </section>
+                <section>
+                  <button
+                    type='submit'
+                    className='appearance-none mt-3 px-3 w-full text-slate-800 dark:text-slate-100 hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold inline-block py-3 border-2 border-neutral-950 dark:border-slate-50'
+                  >
+                    {!loading ? "Join waitlist" : "Adding you to waitlist"}
+                  </button>
+                </section>
+              </form>
+            </>
           )}
         </div>
       </article>
