@@ -64,6 +64,35 @@ const AboutPage = () => {
           </div>
         </section>
       </header>
+      <section className='lg:py-16'>
+        <figure className='w-full col-span-2 aspect-[3/2] lg:aspect-video overflow-hidden max-w-4xl mx-auto relative lg:border-2 border-neutral-950 dark:border-slate-50 group'>
+          <figcaption className='inset-0 absolute bg-gradient-to-br from-blue-600/70 to-red-600/80 dark:from-blue-900/80 dark:to-red-700/60 z-20 flex flex-col justify-center md:items-center md:text-center px-4'>
+            <h1 className='text-slate-100 font-bold text-3xl md:text-4xl'>
+              Join our Community
+            </h1>
+            <p className='text-slate-100 text-base md:text-lg max-w-xl'>
+              As a member of Dome Academy, you have access to community
+              meetings, mentorship and collaboration with seasoned instructors
+              and experts.
+            </p>
+            <div className='mt-4 md:mt-8'>
+              <a
+                href='https://bit.ly/join-dome'
+                target='_blank'
+                className='appearance-none px-3 text-slate-100 hover:bg-slate-50 hover:text-black font-semibold inline-block py-3 border-2 border-slate-50'
+              >
+                Become a member
+              </a>
+            </div>
+          </figcaption>
+          <Image
+            className='scale-110 transition-all duration-300 cursor-pointer object-cover bg-gradient-to-b from-yellow-400/10 via-red-500/10 to-pink-500/10'
+            src='/images/guy-with-laptop.webp'
+            alt=''
+            fill
+          />
+        </figure>
+      </section>
       <div />
     </main>
   );
