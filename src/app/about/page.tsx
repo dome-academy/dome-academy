@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ClashDisplay, ClashGrotesk } from "@/utils/font";
+import { ClashDisplay, ClashGrotesk } from "@/utils/font"; //
 
 const AboutPage = () => {
   return (
