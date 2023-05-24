@@ -1,6 +1,6 @@
 "use client";
 import { useWaitlistStore } from "@/store/waitlistStore";
-import React, { useRef } from "react";
+import { useRef } from "react";
 
 const WaitListInitializer = ({
   email,
