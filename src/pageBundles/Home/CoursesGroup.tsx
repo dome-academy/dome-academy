@@ -1,31 +1,47 @@
 import CoursePill from "@/components/CoursePill";
+import CodeIcon from "@/components/icons/CodeIcon";
+import DesignIcon from "@/components/icons/DesignIcon";
+import DocumentIcon from "@/components/icons/DocumentIcon";
+import ShieldIcon from "@/components/icons/ShieldIcon";
 import { ClashDisplay, ClashGrotesk } from "@/utils/font";
 import Link from "next/link";
 
 const courses = [
   {
+    icon: <DesignIcon />,
     title: "UI/UX",
-    subtext: "30 Course Content",
+    subtext: "30 Courses Available",
+    color: "#E7C5F6",
   },
   {
+    icon: <CodeIcon />,
     title: "Software Development",
-    subtext: "30 Course Content",
+    subtext: "30 Courses Available",
+    color: "#B8F5B7",
   },
   {
+    icon: <CodeIcon />,
     title: "Software Development",
-    subtext: "30 Course Content",
+    subtext: "30 Courses Available",
+    color: "#B8F5B7",
   },
   {
+    icon: <DesignIcon />,
     title: "UI/UX",
-    subtext: "30 Course Content",
+    subtext: "30 Courses Available",
+    color: "#E7C5F6",
   },
   {
+    icon: <ShieldIcon />,
     title: "Cyber Security",
-    subtext: "30 Course Content",
+    subtext: "30 Courses Available",
+    color: "#BAC7F6",
   },
   {
+    icon: <DocumentIcon />,
     title: "Content Writing",
-    subtext: "30 Course Content",
+    subtext: "30 Courses Available",
+    color: "#F5E0B7",
   },
 ];
 
@@ -49,17 +65,19 @@ const CoursesGroup = () => {
         >
           Learn from different courses fields
         </p>
-        <article
-          className={
-            "grid mt-12 max-w-screen-lg px-4 mx-auto justify-center gap-x-10 gap-y-6 md:gap-y-8 xl:gap-y-10 md:grid-cols-2 xl:grid-cols-3 " +
-            ClashGrotesk.className
-          }
-        >
-          {courses.map((course, i) => (
-            <CoursePill key={i} {...course} />
-          ))}
-        </article>
-        <div className='flex justify-center mt-10'>
+        <div className='flex justify-center'>
+          <article
+            className={
+              "grid mt-12 min-w-0 max-w-screen-lg px-4 mx-auto justify-items-center justify-center gap-x-10 gap-y-6 md:gap-y-8 xl:gap-y-10 md:grid-cols-2 xl:grid-cols-3 " +
+              ClashGrotesk.className
+            }
+          >
+            {courses.map((course, i) => (
+              <CoursePill key={i} {...course} />
+            ))}
+          </article>
+        </div>
+        <div className='flex justify-center mt-10 md:mt-20 lg:mt-24'>
           <Link
             href='/login'
             className={
