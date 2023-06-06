@@ -10,33 +10,37 @@ const features = [
     link: "#",
   },
   {
-    title: "Learn anything, anywhere",
-    content: "Get to access any course you like anywhere",
+    title: "Personalised Dashboard",
+    content:
+      "With a personalized dashboard, you'll experience a learning environment designed specifically for you.",
+    linkText: "Set up your dashboard",
+    link: "#",
+  },
+  {
+    title: "Live Sessions",
+    content:
+      "Providing you with live, interactive and self-paced sessions from the best mentors around the world through Dome.",
     linkText: "Find a course",
     link: "#",
   },
   {
-    title: "Learn anything, anywhere",
-    content: "Get to access any course you like anywhere",
-    linkText: "Find a course",
+    title: "Hands-on practice",
+    content:
+      "At Dome, you get to learn by practicing. By solving real-world challenges in our interactive labs, all within your browser.",
+    linkText: "Coming soon",
     link: "#",
   },
   {
-    title: "Learn anything, anywhere",
-    content: "Get to access any course you like anywhere",
-    linkText: "Find a course",
+    title: "Community",
+    content:
+      "Join a network of like-minded individuals on our online platform for an enriching educational experience.",
+    linkText: "Join our community",
     link: "#",
   },
   {
-    title: "Learn anything, anywhere",
-    content: "Get to access any course you like anywhere",
-    linkText: "Find a course",
-    link: "#",
-  },
-  {
-    title: "Learn anything, anywhere",
-    content: "Get to access any course you like anywhere",
-    linkText: "Find a course",
+    title: "Build Portfolio",
+    content: "Share your wins and progress as you learn.",
+    linkText: "Start building",
     link: "#",
   },
 ];
@@ -63,7 +67,7 @@ const Features = () => {
         </p>
         <article
           className={
-            "grid mt-12 min-w-0 max-w-screen-xl px-4 mx-auto justify-items-center justify-center gap-x-10 gap-y-6 md:gap-y-8 xl:gap-y-10 md:grid-cols-2 xl:grid-cols-3 " +
+            "grid mt-12 min-w-0 max-w-screen-xl px-4 mx-auto justify-center gap-x-10 gap-y-6 md:gap-y-8 xl:gap-y-10 md:grid-cols-2 xl:grid-cols-3 " +
             ClashGrotesk.className
           }
         >
