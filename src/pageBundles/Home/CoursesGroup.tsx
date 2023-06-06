@@ -65,18 +65,17 @@ const CoursesGroup = () => {
         >
           Learn from different courses fields
         </p>
-        <div className='flex justify-center'>
-          <article
-            className={
-              "grid mt-12 min-w-0 max-w-screen-lg px-4 mx-auto justify-items-center justify-center gap-x-10 gap-y-6 md:gap-y-8 xl:gap-y-10 md:grid-cols-2 xl:grid-cols-3 " +
-              ClashGrotesk.className
-            }
-          >
-            {courses.map((course, i) => (
-              <CoursePill key={i} {...course} />
-            ))}
-          </article>
-        </div>
+
+        <article
+          className={
+            "flex flex-wrap mt-12 min-w-0 max-w-screen-lg px-4 mx-auto justify-items-center justify-center gap-x-10 gap-y-6 md:gap-y-8 xl:gap-y-10 md:grid-cols-2 xl:grid-cols-3 " +
+            ClashGrotesk.className
+          }
+        >
+          {courses.map((course, i) => (
+            <CoursePill key={i} {...course} />
+          ))}
+        </article>
         <div className='flex justify-center mt-10 md:mt-20 lg:mt-24'>
           <Link
             href='/login'
