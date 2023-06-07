@@ -86,7 +86,7 @@ const WebinarCard: FC<WebinarCardProps> = ({
                     alt={speaker.name}
                     height={60}
                     width={60}
-                    className='rounded-full aspect-square object-cover border-2 border-fuchsia-600 dark:border-fuchsia-300'
+                    className='rounded-full aspect-square object-cover border-2 border-neutral-950 dark:border-slate-50'
                   />
                 </div>
                 <div className='block'>

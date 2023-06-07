@@ -63,7 +63,7 @@ const WebinersSection = () => {
       <p className='text-base md:text-lg max-w-xl mx-auto mb-8 xl:mb-12 mt-4 text-center text-slate-700 dark:text-slate-300 '>
         Ignite Your Learning Journey. Join & Engage with Our Upcoming Webinars!
       </p>
-      <article className='grid lg:grid-cols-3 max-w-screen-xl mx-auto lg:gap-x-4 xl:gap-x-6 px-4 md:px-8 lg:px-8'>
+      <article className='grid md:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto gap-y-6 md:gap-x-4 xl:gap-x-6 px-4 sm:px-8 md:px-10'>
         {webinars.map((web, i) => (
           <WebinarCard key={i} {...web} />
         ))}
