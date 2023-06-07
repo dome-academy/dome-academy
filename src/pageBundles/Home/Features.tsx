@@ -47,7 +47,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className='border-t-2 border-y-neutral-950 dark:border-y-slate-50'>
+    <section className='border-y-2 border-y-neutral-950 dark:border-y-slate-50'>
       <div className='border-x-2 border-x-neutral-950 dark:border-x-slate-50 text-slate-900 dark:text-slate-200  mx-4 md:mx-16 py-8 md:py-14'>
         <h1
           className={
