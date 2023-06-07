@@ -22,7 +22,10 @@ const Cta = () => {
             />
           </div>
           <div className='mt-6 text-center lg:text-left lg:mt-0'>
-            <h1 className='text-xl lg:text-2xl xl:text-3xl font-bold mb-2 text-slate-900 dark:text-slate-50'>
+            <h1
+              style={ClashDisplay.style}
+              className='text-xl lg:text-2xl xl:text-3xl font-semibold mb-2 text-slate-900 dark:text-slate-50'
+            >
               Register for Free
             </h1>
             <p className='max-w-[420px]'>
