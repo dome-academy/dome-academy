@@ -1,7 +1,7 @@
 import WaitlistModal from "@/components/WaitlistModal";
-import Footer from "./footer";
+import Footer from "../components/Layouts/footer";
 import "./globals.css";
-import Navbar from "./navbar";
+import Navbar from "../components/Layouts/navbar";
 
 export const metadata = {
   title: "Dome Academy | Collaborate together and build great things",
