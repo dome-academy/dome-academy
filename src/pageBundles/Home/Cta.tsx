@@ -13,9 +13,9 @@ const Cta = () => {
     >
       <div className='border-x-2 border-x-neutral-950 dark:border-x-slate-50 text-slate-900 dark:text-slate-200  mx-4 md:mx-16 py-8 md:py-14'>
         <div className='flex flex-col lg:flex-row items-center px-4 md:px-8 gap-x-20 xl:gap-x-36'>
-          <div className='aspect-[5/3] border-2 border-neutral-950 dark:border-slate-50 bg-black relative overflow-hidden rounded-3xl w-full sm:w-4/5 lg:w-1/2'>
+          <div className='aspect-[5/3] border-2 border-r-8 border-b-8 border-neutral-950 dark:border-slate-50 bg-black relative overflow-hidden rounded-3xl w-full sm:w-4/5 lg:w-1/2'>
             <Image
-              src='/images/group-learning.png'
+              src='/images/study-group.webp'
               alt='group-learning'
               className='object-cover'
               fill
