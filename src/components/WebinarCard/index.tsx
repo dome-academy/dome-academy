@@ -39,7 +39,7 @@ const WebinarCard: FC<WebinarCardProps> = ({
             <Image src={coverImage} alt={title} fill className='object-cover' />
           </figure>
           <section className='py-4 px-4'>
-            <div className='flex gap-x-5 items-center mb-4'>
+            <div className='flex gap-x-5 items-center mb-2'>
               <div className='flex items-center gap-x-2'>
                 <svg
                   width='24'
@@ -53,7 +53,7 @@ const WebinarCard: FC<WebinarCardProps> = ({
                     fill='currentColor'
                   />
                 </svg>
-                <p className='text-sm md:text-base font-light'>{date}</p>
+                <p className='text-xs md:text-base font-light'>{date}</p>
               </div>
               <div className='flex items-center gap-x-2'>
                 <svg
@@ -68,12 +68,12 @@ const WebinarCard: FC<WebinarCardProps> = ({
                     fill='currentColor'
                   />
                 </svg>
-                <p className='text-sm md:text-base font-light'>{time}</p>
+                <p className='text-xs md:text-base font-light'>{time}</p>
               </div>
             </div>
             <h2
               className={
-                "md:text-lg font-semibold mb-4 " + ClashDisplay.className
+                "md:text-lg font-semibold mb-3 " + ClashDisplay.className
               }
             >
               {title}
@@ -100,7 +100,7 @@ const WebinarCard: FC<WebinarCardProps> = ({
                   {speaker.position ? (
                     <p className='font-normal'>{speaker.position}</p>
                   ) : null}
-                  <p className='opacity-60 mt-0.5'>Speaker</p>
+                  <p className='opacity-60 mt-0.5 text-sm'>Speaker</p>
                 </div>
               </div>
               {host ? (
