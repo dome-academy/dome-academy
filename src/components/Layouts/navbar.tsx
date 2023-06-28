@@ -5,7 +5,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <header className='border-b-2 bg-gray-50 dark:bg-neutral-950 border-neutral-950 dark:border-slate-50'>
-      <nav className='flex w-full text-slate-900 dark:text-slate-100  justify-between md:pl-6'>
+      <nav className='flex w-full text-slate-900 dark:text-slate-100  justify-between md:pl-12'>
         <Link
           href='/'
           className='px-4 md:px-6 flex gap-x-0.5 items-center scale-105 h-full py-3'
@@ -21,7 +21,7 @@ const Navbar = () => {
           </h1>
         </Link>
         <ul className='flex'>
-          <li className='hidden md:block'>
+          <li>
             <Link
               href='/about'
               className={
@@ -29,18 +29,20 @@ const Navbar = () => {
                 ClashGrotesk.className
               }
             >
-              About
+              Sign in
             </Link>
           </li>
-          <Link
-            href='/'
-            className={
-              "appearance-none inline-flex items-center min-w-[120px] px-3 md:px-6  text-black dark:text-white hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold border-l-2 border-neutral-950 dark:border-slate-50 " +
-              ClashDisplay.className
-            }
-          >
-            Sign in
-          </Link>
+          <li className='hidden md:block'>
+            <Link
+              href='/'
+              className={
+                "appearance-none inline-flex h-full justify-center dark:bg-gray-50 bg-neutral-950 items-center min-w-[120px] px-3 md:px-6  dark:text-black text-white font-semibold border-l-2 border-neutral-950 dark:border-slate-50 " +
+                ClashDisplay.className
+              }
+            >
+              Sign up
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
