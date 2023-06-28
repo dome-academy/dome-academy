@@ -1,4 +1,10 @@
 import FeatureCard from "@/components/FeatureCard";
+import CommunitySvg from "@/components/Illustrations/CommunitySvg";
+import CoursesSvg from "@/components/Illustrations/CoursesSvg";
+import DashboardSvg from "@/components/Illustrations/DashboardSvg";
+import LiveSessionsSvg from "@/components/Illustrations/LiveSessionsSvg";
+import PortfolioSvg from "@/components/Illustrations/PortfolioSvg";
+import PracticeSvg from "@/components/Illustrations/PracticeSvg";
 import { ClashDisplay, ClashGrotesk } from "@/utils/font";
 import React from "react";
 
@@ -8,6 +14,11 @@ const features = [
     content: "Get to access any course you like anywhere",
     linkText: "Find a course",
     link: "#",
+    children: (
+      <div className='absolute w-full flex justify-end'>
+        <CoursesSvg />
+      </div>
+    ),
   },
   {
     title: "Personalised Dashboard",
@@ -15,6 +26,11 @@ const features = [
       "With a personalized dashboard, you'll experience a learning environment designed specifically for you.",
     linkText: "Set up your dashboard",
     link: "#",
+    children: (
+      <div className='absolute w-full flex justify-center pt-6'>
+        <DashboardSvg />
+      </div>
+    ),
   },
   {
     title: "Live Sessions",
@@ -22,6 +38,11 @@ const features = [
       "Providing you with live, interactive and self-paced sessions from the best mentors around the world through Dome.",
     linkText: "Find a course",
     link: "#",
+    children: (
+      <div className='absolute w-full flex pt-5 pr-6'>
+        <LiveSessionsSvg />
+      </div>
+    ),
   },
   {
     title: "Hands-on practice",
@@ -29,6 +50,11 @@ const features = [
       "At Dome, you get to learn by practicing. By solving real-world challenges in our interactive labs, all within your browser.",
     linkText: "Coming soon",
     link: "#",
+    children: (
+      <div className='absolute w-full flex pr-5'>
+        <PracticeSvg />
+      </div>
+    ),
   },
   {
     title: "Community",
@@ -36,12 +62,22 @@ const features = [
       "Join a network of like-minded individuals on our online platform for an enriching educational experience.",
     linkText: "Join our community",
     link: "#",
+    children: (
+      <div className='absolute w-full flex justify-end pt-3 pr-6'>
+        <CommunitySvg />
+      </div>
+    ),
   },
   {
     title: "Build Portfolio",
     content: "Share your wins and progress as you learn.",
     linkText: "Start building",
     link: "#",
+    children: (
+      <div className='absolute w-full flex justify-end pt-4'>
+        <PortfolioSvg />
+      </div>
+    ),
   },
 ];
 

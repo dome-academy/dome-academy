@@ -14,10 +14,12 @@ const FeatureCard: FC<PropsWithChildren<FeatureCardInterface>> = ({
   content,
   linkText,
   link,
+  children,
 }) => {
   return (
     <div className='w-full relative rounded-3xl border-2 border-neutral-950 dark:border-slate-50 bg-neutral-200/50 dark:bg-neutral-800/50 px-4 lg:px-5 overflow-hidden'>
       <div className='absolute inset-y-0 w-1/2 grid-background right-0 opacity-30' />
+      {children}
       <div
         className={
           "relative flex flex-col mt-[200px] pb-[18px] " +
