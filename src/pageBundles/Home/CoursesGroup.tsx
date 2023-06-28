@@ -27,7 +27,7 @@ const courses = [
   },
   {
     icon: <DesignIcon />,
-    title: "UI/UX",
+    title: "Cloud Computing",
     subtext: "30 Courses Available",
     color: "#E7C5F6",
   },
