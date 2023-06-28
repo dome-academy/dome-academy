@@ -20,6 +20,37 @@ const Navbar = () => {
             Dome
           </h1>
         </Link>
+        <ul
+          className={
+            "hidden md:flex items-center gap-x-9 xl:gap-x-12 font-medium " +
+            ClashGrotesk.className
+          }
+        >
+          <li>
+            <Link href='/' className='hover:text-fuchsia-500'>
+              Learn
+            </Link>
+          </li>
+          <li>
+            <Link href='/' className='hover:text-fuchsia-500'>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href='/' className='hover:text-fuchsia-500'>
+              Community
+            </Link>
+          </li>
+          <li>
+            <a
+              className='hover:text-fuchsia-500'
+              href='https://domeacademy.substack.com/'
+              target='_blank'
+            >
+              Blog
+            </a>
+          </li>
+        </ul>
         <ul className='flex'>
           <li>
             <Link
