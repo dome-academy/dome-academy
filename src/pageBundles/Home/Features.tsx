@@ -15,7 +15,7 @@ const features = [
     linkText: "Find a course",
     link: "#",
     children: (
-      <div className='absolute w-full flex justify-end'>
+      <div className='absolute w-full flex justify-end inset-x-0 transition-transform duration-200 group-hover:scale-105'>
         <CoursesSvg />
       </div>
     ),
@@ -27,7 +27,7 @@ const features = [
     linkText: "Set up your dashboard",
     link: "#",
     children: (
-      <div className='absolute w-full flex justify-center pt-6'>
+      <div className='absolute w-full flex justify-center pt-6 inset-0 transition-transform duration-200 group-hover:scale-105'>
         <DashboardSvg />
       </div>
     ),
@@ -39,7 +39,7 @@ const features = [
     linkText: "Find a course",
     link: "#",
     children: (
-      <div className='absolute w-full flex pt-5 pr-6'>
+      <div className='absolute w-full flex pt-5 pr-6 transition-transform duration-200 group-hover:scale-105'>
         <LiveSessionsSvg />
       </div>
     ),
@@ -51,7 +51,7 @@ const features = [
     linkText: "Coming soon",
     link: "#",
     children: (
-      <div className='absolute w-full flex pr-5'>
+      <div className='absolute w-full flex pr-5 transition-transform duration-200 group-hover:scale-105'>
         <PracticeSvg />
       </div>
     ),
@@ -63,7 +63,7 @@ const features = [
     linkText: "Join our community",
     link: "#",
     children: (
-      <div className='absolute w-full flex justify-end pt-3 pr-6'>
+      <div className='absolute w-full flex justify-end pt-3 inset-x-0 pr-3 transition-transform duration-200 group-hover:scale-105'>
         <CommunitySvg />
       </div>
     ),
@@ -74,7 +74,7 @@ const features = [
     linkText: "Start building",
     link: "#",
     children: (
-      <div className='absolute w-full flex justify-end pt-4'>
+      <div className='absolute w-full flex justify-end pt-4 transition-transform duration-200 group-hover:scale-105'>
         <PortfolioSvg />
       </div>
     ),
