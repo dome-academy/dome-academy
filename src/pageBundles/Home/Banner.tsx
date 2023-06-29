@@ -67,8 +67,8 @@ const Banner = () => {
           ClashGrotesk.className
         }
       >
-        Unlock your potential with Dome. Learn in public, work on real world
-        problems with others and build your portfolio.
+        Unlock your potential with Dome. Learn in public, tackle real-world
+        problems with others, and build an impressive portfolio.
       </p>
       <Link
         href='/login'

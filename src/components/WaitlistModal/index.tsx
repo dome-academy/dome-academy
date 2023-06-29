@@ -57,7 +57,7 @@ const WaitlistModal = () => {
   return show ? (
     <main
       className={
-        "fixed grid inset-0 place-items-center bg-black/60 backdrop-blur-sm z-20 px-2 " +
+        "fixed grid inset-0 place-items-center bg-black/60 backdrop-blur-sm z-30 px-2 " +
         ClashGrotesk.className
       }
     >
