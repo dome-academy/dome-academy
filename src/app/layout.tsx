@@ -2,6 +2,7 @@ import WaitlistModal from "@/components/WaitlistModal";
 import Footer from "../components/Layouts/footer";
 import "./globals.css";
 import Navbar from "../components/Layouts/navbar";
+import Script from "next/script";
 
 export const metadata = {
   title: "Dome Academy | Collaborate together and build great things",
@@ -41,6 +42,11 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <Script
+        async
+        data-domain='domeinitiative.com'
+        src='https://plausible.io/js/script.js'
+      />
     </html>
   );
 }
