@@ -1,5 +1,6 @@
-import "./globals.css";
-import Script from "next/script";
+import WaitlistModal from "@/components/WaitlistModal";
+import Footer from "@/components/Layouts/footer";
+import Navbar from "@/components/Layouts/navbar";
 
 export const metadata = {
   title: "Dome Academy | Collaborate together and build great things",
@@ -30,13 +31,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      {children}
-      <Script
-        async
-        data-domain='domeinitiative.com'
-        src='https://plausible.io/js/script.js'
-      />
-    </html>
+    <>
+      <body className='bg-gray-50 dark:bg-slate-950 w-screen overflow-x-hidden'>
+        {/* <WaitListInitializer email='' showModal={false} /> */}
+        <Navbar />
+        <WaitlistModal />
+
+        {children}
+        <Footer />
+      </body>
+    </>
   );
 }
