@@ -54,7 +54,7 @@ const Navbar = () => {
         <ul className='flex'>
           <li>
             <Link
-              href='/about'
+              href='/login'
               className={
                 "flex justify-center min-w-[120px] px-3 items-center scale-105 h-full text-black dark:text-white hover:bg-slate-950 dark:hover:bg-slate-50 hover:text-slate-50 dark:hover:text-black font-semibold border-l-2 border-neutral-950 dark:border-slate-50 " +
                 ClashGrotesk.className
@@ -65,7 +65,7 @@ const Navbar = () => {
           </li>
           <li className='hidden md:block'>
             <Link
-              href='/'
+              href='/join'
               className={
                 "appearance-none inline-flex h-full justify-center dark:bg-gray-50 bg-neutral-950 items-center min-w-[120px] px-3 md:px-6  dark:text-black text-white font-semibold border-l-2 border-neutral-950 dark:border-slate-50 " +
                 ClashDisplay.className

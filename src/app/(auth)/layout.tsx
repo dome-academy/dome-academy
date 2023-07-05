@@ -37,7 +37,15 @@ export default function RootLayout({
             {children}
           </section>
           <figure className='hidden lg:block h-screen relative flex-1'>
-            <div className='inset-0 absolute bg-gradient-to-br from-blue-600/70 to-red-600/80 dark:from-blue-900/80 dark:to-red-700/60 z-20 flex flex-col justify-center md:items-center md:text-center px-4' />
+            <figcaption className='inset-0 absolute bg-gradient-to-t from-blue-400/70 to-red-500/60 dark:from-blue-900/80 dark:to-red-700/60 z-20 flex justify-center items-end py-20 px-14'>
+              <p className='text-2xl max-w-[500px] mx-auto dark:text-slate-100'>
+                Dome academy provides you with{" "}
+                <span className='text-[#ED127B]'>Live</span>, Interactive and
+                Self-paced sessions from the{" "}
+                <span className='text-[#ED127B]'>best mentors</span> around the
+                world.
+              </p>
+            </figcaption>
             <Image
               src='/images/study-group.webp'
               alt='group-learning'
