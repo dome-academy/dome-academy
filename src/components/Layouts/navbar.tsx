@@ -1,25 +1,12 @@
 import { ClashDisplay, ClashGrotesk } from "@/utils/font";
-import Image from "next/image";
 import Link from "next/link";
+import DomeLogo from "../Navigation/DomeLogo";
 
 const Navbar = () => {
   return (
     <header className='border-b-2 bg-gray-50 dark:bg-neutral-950 border-neutral-950 dark:border-slate-50'>
       <nav className='flex w-full text-slate-900 dark:text-slate-100  justify-between md:pl-12'>
-        <Link
-          href='/'
-          className='px-4 md:px-6 flex gap-x-0.5 items-center scale-105 h-full py-3'
-        >
-          <Image src='/images/logo.png' height={40} width={40} alt='logo' />
-          <h1
-            className={
-              `text-lg md:text-xl text-gray-900 dark:text-gray-200 font-semibold ` +
-              ClashDisplay.className
-            }
-          >
-            Dome
-          </h1>
-        </Link>
+        <DomeLogo />
         <ul
           className={
             "hidden md:flex items-center gap-x-9 xl:gap-x-12 font-medium " +

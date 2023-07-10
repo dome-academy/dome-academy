@@ -1,3 +1,4 @@
+import DomeLogo from "@/components/Navigation/DomeLogo";
 import { ClashGrotesk } from "@/utils/font";
 import Image from "next/image";
 
@@ -33,7 +34,10 @@ export default function RootLayout({
     <html lang='en'>
       <body className='bg-gray-50 dark:bg-slate-950 w-screen overflow-x-hidden'>
         <main className={` min-h-screen mb-0 flex ` + ClashGrotesk.className}>
-          <section className='h-screen grid bg-gray-50 dark:bg-neutral-950 w-full lg:w-1/2 xl:w-2/5 text-slate-900 dark:text-slate-200 place-items-center'>
+          <section className='h-screen grid bg-gray-50 dark:bg-neutral-950 w-full lg:w-1/2 xl:w-2/5 text-slate-900 dark:text-slate-200 place-items-center relative'>
+            <nav className='absolute top-4 left-4'>
+              <DomeLogo />
+            </nav>
             {children}
           </section>
           <figure className='hidden lg:block h-screen relative flex-1'>
